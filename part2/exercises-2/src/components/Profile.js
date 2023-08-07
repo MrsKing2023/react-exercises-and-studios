@@ -1,15 +1,29 @@
 import './styles.css';
 import Button from './Button';
+import oceans from './components/oceans.json.js';
 
+const listItem = oceans.map(ocean =>
+   //if (${creatureCheck} = "true") {   
+   <div key={ocean.id} className="profile" >
+      <img src={ocean.image} alt={ocean.name} className="img"/>   
+      
+      } else (${creatureCheck} = "false") {   
+         <div key={ocean.id}  className={`${ocean.fishCheck === "true" ? "isAFish" : "profile"}`}></div> ) {
+   </div>
+); 
+
+}
+      
 
 function Profile()
 {
    return(
       <>
-         <h3>Coming Soon! Profiles of Ocean creatures</h3>
+         <ul>
+            {listItem}
+         </ul>  
          <Button />
-      </>  
+      </>
    );
 }
-
 export default Profile;
